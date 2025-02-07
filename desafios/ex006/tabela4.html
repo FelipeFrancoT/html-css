@@ -6,14 +6,25 @@
     <title>exercicio de tabelas</title>
     <style>
 table{
-            width: 500px;
+            width: 700px;
             border-collapse: collapse;
             position: relative;
 
         }
         td, th{
             border: solid 1px black;
-            padding: 10px;
+            padding: 2px;
+            font-weight: bold;
+        }
+         th.preto{
+            background-color: rgba(0, 0, 0, 0.596);
+            color: white;
+            font-weight: bold;
+        }
+        td.preto{
+            background-color: rgba(0, 0, 0, 0.568);
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -21,29 +32,70 @@ table{
     <table>
         <thead>
         <tr>
-            <th rowspan="2">area</th>
-            <th rowspan="2">diciplinas</th>
-            <th colspan="2">notas</th>
-            <th rowspan="2">medias</th>
+            <th class="preto" rowspan="2">area</th>
+            <th class="preto" rowspan="2">diciplinas</th>
+            <th class="preto" colspan="2">notas</th>
+            <th class="preto" rowspan="2">medias</th>
         </tr>
         <tr>
-            <th>nota.1</th>
-            <th>nota.2</th>
+            <th class="preto">nota.1</th>
+            <th class="preto">nota.2</th>
             
         </tr>
 
         </thead>
         <tbody>
              <tr>
-                <th rowspan="4">exatas</th>
-                <td></td>
-                <td></td>
-                <td></td>
+                <th rowspan="4" >exatas</th>
+                <td>matematica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
              </tr>
              <tr>
+                <td>fisica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+             </tr>
+             <tr>
+                <td>quimica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+             </tr>
+             <tr>
+                <td>bologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+             </tr>
+             <tr>
+                <th class="preto" colspan="4">medias humanas</th>
+                <td class="preto">0.0</td>
+             </tr> 
+             <tr>
                 
-               
-             </tr>       
+                    <th rowspan="2">humanas</th>
+                    <td>historia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    
+                    
+                 
+             </tr> 
+             <tr>
+                
+                <td>geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+             </tr>
+             <tr>
+                <th class="preto" colspan="4">medias humanas</th>
+                <td class="preto">0.0</td>
+             </tr>      
         </tbody>
     </table>
 </body>
