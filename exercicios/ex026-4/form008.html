@@ -3,29 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formularios</title>
+    <title>Formulários</title>
 </head>
 <body>
-    <h1>exemplo de formularios</h1>
+    <h1>Exemplo de formulários</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <!-- BLOCO DE SUBTRAÇÃO -->
+        <h2>Subtração</h2>
         <p>
-            <label for="in1">numero 1:</label>
-            <input type="number" name="n1" id="in1" min="0" max="30" required oninput="isoma.innerHTML = Number(in1.value) - Number(in2.value)">
+            <label for="in1_sub">Número 1:</label>
+            <input type="number" name="n1_sub" id="in1_sub" min="0" max="30" required oninput="calcSubtracao()">
         </p>
         <p>
-            <label for="inum">numero 2:</label>
-            <input type="number" name="n2" id="in2" min="0" max="30" required oninput="isoma.innerHTML = Number(in1.value) - Number(in2.value)">
+            <label for="in2_sub">Número 2:</label>
+            <input type="number" name="n2_sub" id="in2_sub" min="0" max="30" required oninput="calcSubtracao()">
         </p>
         <p>
-            <label for="isoma">soma:</label>
-            <output name="soma" id="isoma">0</output>
+            <label for="isoma_sub">Resultado:</label>
+            <output name="soma_sub" id="isoma_sub">0</output>
         </p>
 
+        <!-- BLOCO DE SOMA -->
+        <h2>Soma</h2>
+        <p>
+            <label for="in1_soma">Número 1:</label>
+            <input type="number" name="n1_soma" id="in1_soma" min="0" max="90" required oninput="calcSoma()">
+        </p>
+        <p>
+            <label for="in2_soma">Número 2:</label>
+            <input type="number" name="n2_soma" id="in2_soma" min="0" max="90" required oninput="calcSoma()">
+        </p>
+        <p>
+            <label for="isoma_soma">Resultado:</label>
+            <output name="soma_soma" id="isoma_soma">0</output>
+        </p>
 
         <p>
-            <input type="submit" value="enviar">
-            <input type="reset" value="limpar">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <script>
+        function calcSubtracao() {
+            let n1 = Number(document.getElementById('in1_sub').value)
+            let n2 = Number(document.getElementById('in2_sub').value)
+            document.getElementById('isoma_sub').innerHTML = n1 - n2
+        }
+
+        function calcSoma() {
+            let n1 = Number(document.getElementById('in1_soma').value)
+            let n2 = Number(document.getElementById('in2_soma').value)
+            document.getElementById('isoma_soma').innerHTML = n1 + n2
+        }
+    </script>
 </body>
 </html>
